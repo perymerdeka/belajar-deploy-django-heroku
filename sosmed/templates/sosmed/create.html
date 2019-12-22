@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+  {{page_title}}
+{% endblock page_title %}
+
+{% block contents %}
+<h1>Tambah Akun</h1>
+  <form method="POST">
+    {% csrf_token %}
+    <table>
+      {{akun_form.as_table}}
+    </table>
+    <button class="btn btn-primary" type="submit">Tambah Data</button>
+  </form>
+{% endblock contents %}
